@@ -1,0 +1,164 @@
+Profile folder: C:/Users/Itamar/AppData/Roaming/GoodSync
+GoodSync ver 10.5.8.5
+Copyright (C) 2007-2017 Siber Systems Inc.
+Pro V10; Pro V9; Days Used: 48, Days Installed: 48
+
+Usage: GSYNC [<global options>] <command> [<command options>]
+GSYNC global options:
+/help                   -- This help message
+/noprint                -- Do not print command line arguments for verification
+/profile=<folder>       -- Folder where files jobs.tic and options.tic are located
+/jobs-file=file-path    -- load job list from this file in TIC or TIX format
+/ll=<number>            -- Log Detail level
+/lf=<folder>            -- Folder to which global log file is written
+/no-log-stamp           -- do not add timestamp to each log line
+/check-ver              -- check version on goodsync.com now
+/license                -- display license and exit
+/progress=yes|no        -- display progress messages
+/cleanup-logs=yes|no    -- cleanup old log files when GSYNC starts (default: yes)
+/cleanup-tmp=yes|no     -- cleanup temporary files when GSYNC starts (default: no)
+/override-locks=yes|no  -- override (delete) lock files on Analyze (default: no)
+/default-values=yes|no  -- TIX: save options that have default values (no: skip defaults)
+/orderid=NNNNNNNNNN      -- activate license from this 10-digit OrderId
+/username="Order Name" -- name on the order used to activate the license
+
+/system-tray=yes|no      - Show System Tray (Windows only)
+/tray-on-close=yes|no    - Go to System Tray on App Close (Windows only)
+/check-new-ver           - Check version on www.goodsync.com from time to time
+/install-new-ver         - Auto-install new version if found on www.goodsync.com
+/sort-jobs-alpha=yes|no  - Sort Jobs by Alphabet in Job List view
+/auto-hide-mini-win=yes|no - Auto Hide Mini Window (Windows only)
+/group-log-lines=yes|no  - Group similar log lines
+/log-retain-days=NNN     - Number of days for which old logs are retained
+/months-old-gens=NNN     - Retain Generation history for this many months
+/parallel-auto-jobs=NNN  - Max number of Auto-mode jobs to be run in parallel
+/auto-jobs-quant=NNN     - Quant (in sec) for starting Auto jobs
+/compare-prog=<FilePath> - Use this program to compare two files diff style
+/warn-time-range=yes|no  - Warn about mod time being out of range
+/proxy-auto=yes|no       - Use auto proxy from Internet Options -> Connections
+/proxy-host=hostname     - Use proxy server specified below
+/proxy-port=port         - Proxy server port
+/proxy-userid=<userid>   - Proxy server UserID for authenticated proxies
+/proxy-passwd=<password> - Proxy Password
+/smtp-host=hostname      - SMTP server for post-analyze/sync emails
+/smtp-port=port          - SMTP server port
+/smtp-secure=yes|no      - Use SSL to connect to SMTP server
+/smtp-starttls=yes|no    - Use STARTTLS to connect to SMTP server
+/smtp-userid=<userid>    - SMTP server UserID
+/smtp-passwd=<password>  - SMTP server Password
+/smtp-sender=<name-email> - Sender EMail and Name: John Smith <john.smith@company.com>
+
+<job command>:
+analyze /all - Analyze all jobs
+analyze <job list> - Analyze listed jobs, job names are separated by space
+sync /all - Analyze and Sync all jobs
+sync <job list> - Analyze and Sync listed jobs, job names are separated by space
+job        <job name> [<job options>] - create a job or update existing job
+job-new    <job name> [<job options>] - create a job with specified options
+job-tmp    <job name> [<job options>] - use a temporary job with specified options, not saved
+job-update <job name> [<job options>] - change specified options in the existing job
+job-delete <job name>                 - delete existing job
+job-list                              - list available jobs
+
+<job options>:
+/analyze - Analyze Job after it has been created or updated
+/sync    - Analyze and Sync Job after it has been created or updated
+/autoclear - Remove tree after successful Sync or Analyze with no changes in Auto mode
+
+/f1=<folder path>      /f2=<folder path>     - left/right folder to sync
+/userid1=<userid>      /userid2=<userid>     - left/right UserID (authentication)
+/password1=<password>  /password2=<password> - left/right Password (authentication)
+/fat-like1=yes|no      /fat-like2=yes|no     - left/right FAT-like file system
+/implicit1=yes|no      /implicit2=yes|no     - left/right Implicit Mode in FTPS
+/compress1=yes|no      /compress2=yes|no     - left/right prefer Compressed flag
+/uncompress1=yes|no    /uncompress2=yes|no   - left/right prefer Uncompressed flag
+/time-trans1=yes|no    /time-trans2=yes|no   - left/right cannot copy/set file mod time, use time translate
+/bad-certs1=yes|no     /bad-certs2=yes|no    - left/right allow bad SSL certificates
+/useproxy1=yes|no      /useproxy2=yes|no     - left/right Use Proxy option
+/wininet1=yes|no       /wininet2=yes|no      - left/right WinInet implementation option
+/utf8-1=yes|no         /utf8-2=yes|no        - left/right UTF-8/ANSI file name encode
+/temp-dest-file1=yes|no	    /temp-dest-file2=yes|no - Use temporary files when copying on this side
+/hostbased1=yes|no          /hostbased2=yes|no      - left/right Host Based Addressing option (S3)
+/reduced-redundancy1=yes|no /reduced-redundancy2=yes|no - left/right Reduce Redundancy option (S3)
+/server-encrypt1=yes|no     /server-encrypt2=yes|no - left/right Server Encrypt option (S3)
+/accesspolicy1=policy       /accesspolicy2=policy   - left/right Access Policy option (S3)
+/aws4-auth1=yes|no          /aws4-auth2=yes|no      - left/right AWS V4 Authentication option (S3)
+/show-native1=yes|no   /show-native2=yes|no  - left/right export/import native GDocs files
+/active1=yes|no        /active2=yes|no       - left/right active/passive FTP mode
+/mdtm1=yes|no          /mdtm2=yes|no         - left/right use MDTM in FTP
+/mlsd1=yes|no          /mlsd2=yes|no         - left/right use MLSD in FTP
+/implicit1=<session>   /implicit2=<session>  - left/right Implicit FTPS mode
+/listla=yes|no         /listla2=yes|no       - left/right List -la option (FTP only)
+/pk1=<file-path>       /pk2=<file-path>      - left/right folder SFTP private key path
+/pk1=<file-path>       /pk2=<file-path>      - left/right folder WebDAV private cert path
+/apiscope=1<scope>     /apiscope2=<scope>    - left/right API Scope option (Office 365)
+
+/dir=2way|ltor|rtol - Job Direction option
+/deletions=yes|no - Propagate Deletions option
+/create-if-not-found=yes|no - Create job sync folders if not found
+/balloon-msg=none|errors|changes - Show Balloon never, on errors, on changes
+/save-prev-version=yes|no - Saved Deleted/Replaced Files (last version only) to _gsdata_\_saved_
+/cleanup-prev-version=yes|no - Whether to cleanup Previous File Version
+/days-prev-version=<number> - Number of days for which to keep Previous File Version
+/save-past-versions=yes|no - Saved Deleted/Replaced Files (multiple versions) to _gsdata_\_history_
+/cleanup-past-version=yes|no - Whether to cleanup Past File Versions
+/days-past-version=<number> - Number of days for which to keep Past File Versions
+/cleanup-old-generations=yes|no - Whether to cleanup old generations of files and folders
+/months-old-generations=<number> - Number of months for which to keep old generations
+/reconnect-secs=<number> - Total number of seconds for reconnect attempts
+/run-parallel-threads=yes|no - Run parallel threads in Sync
+/worker-threads=N - Number of threads to execute in parallel on Sync
+/speed-limit=<number> - File Copy Speed Limit in Kb/sec
+/up-speed-limit=<number> - Upload File Copy Speed Limit in Kb/sec
+
+/exclude=<file-mask> - Files and folders to exclude
+/include=<file mask> - Files and folders to include
+/exclude-empty=yes|no - Exclude Empty Folders option
+/exclude-hidden=yes|no - Exclude hidden files and folders
+/exclude-system=yes|no - Exclude system files and folders
+
+/on-file-change=analyze|sync|no - Auto Analyze/Sync on File Change in local folders
+/onfilechange-delay=NNN - On File Change delay on seconds
+/on-folder-connect=analyze|sync|no - Auto Analyze/Sync on Folder Connect
+/on-start=analyze|sync|no - Auto Analyze/Sync on Start of GoodSync
+/autostart-delay=NNN - On Start delay on seconds
+/on-timer=analyze|sync|no - Auto Analyze/Sync on Timer (every N minutes)
+/timer-period=<NN> - Timer period in minutes for /on-timer option
+/on-logout=sync - Auto Sync on Logoff from Windows account
+/on-schedule=analyze|sync|no - Auto Sync on Schedule
+/schedule-min=list-of-number-ranges (0 to 59)  - Schedule Minute
+/schedule-hour=list-of-number-ranges (0 to 23) - Schedule Hour
+/schedule-day=list-of-number-ranges (1 to 31)  - Schedule Day
+/schedule-month=list-of-number-ranges (1 to 12) - Schedule Month
+/schedule-dow=list-of-number-ranges (0=Sun to 6=Sat) - Schedule DayOfWeek
+/auto-unattended=yes|no - Run auto job in gs-runner service
+/limit-changes=<NN> - Do not Sync if percentage of changed files is more than NN
+/autoresolve=no|left|right|newer|stopsync - Auto-Resolve Conflicts option
+/rename-losing-file=yes|no - Rename losing file in the conflict, instead of deleting it
+/wait-for-locks=yes|no - Wait for Locks, instead of producing error
+/autoclear=yes|no - Auto Clear Sync Tree after Sync
+
+/pre-analyze-action=<file-path> - Pre Analyze Program
+/post-analyze-action=<email>|<file-path> - Post Analyze Email or Program
+/post-sync-action=<email>|<file-path> - Post Sync Email or Program
+
+/copy-create-time=yes|no - Copy File/Folder creation time
+/copy-attrs=yes|no - Copy File/Folder attribute bits (rwx)
+/copy-acl=yes|no - Copy ACL security info (owner and ACL)
+/copy-ext-attrs=yes|no - Copy Extended Attributes (Mac only)
+/copy-owner=yes|no - Copy File/Folder Owner (not needed when /copy-acl)
+/copy-locked=yes|no - Copy Locked Files using Shadow Copy Service
+/uber-unlocked=yes|no - Uber-Unlocked mode: allow deletion of files being read
+/retry-sync-if-file-changes=yes|no - Retry Sync of file if it changes during sync
+
+/compare-md5=yes|no - Compare MD5 checksums in Analyze
+/detect-moves=yes|no - Detect File and Folder Moves and Renames
+/est-req-space=yes|no - Estimate Required Free Space
+/links=ignore|copy-asis|drill-down - Sym Links processing
+
+/no-gsdata1=yes|no     /no-gsdata2=yes|no     - No _GsData_ folder on left/right
+/no-listdir1=yes|no    /no-listdir2=yes|no    - No ListDir TrustStateFile on left/right
+/encrypt-files1=yes|no /encrypt-files2=yes|no - Encrypt file bodies on left/right
+/encrypt-paths1=yes|no /encrypt-paths2=yes|no - Encrypt file paths on left/right
+/encrypt-password1=str /encrypt-password2=str - Encryption password on left/right
+
