@@ -5,11 +5,23 @@ import sys
 # brackets - number of images capture in each shot
 # total images taken is equal to shots*brackets
 
-total_time_h = 15.0 # time of timelapse in hours
-video_time_s = 30.0 # time of output video seconds
+# Note: 
+#
+# This program outputs 2 calculation - interval and storage. Note that:
+#
+# interval_s is:
+#   a function of:  total_time_h, video_time_s, fps 
+#   independent of: brackets_count, estimated_image_size_M
+#
+# estimated_memory_GB is: 
+#   a function of:  video_time_s, fps, brackets_count, estimated_image_size_M
+#   independent of: total_time_h (!!!!)
+
+total_time_h = 18.0 # time of timelapse in hours
+video_time_s = 60.0 # time of output video seconds
 fps = 60 # frames/sec of output video
-brackets_count = 1 # number of brackets to take for HDR
-estimated_image_size_M = 35.0 # estimated size of each image in MB
+brackets_count = 2 # number of brackets to take for HDR
+estimated_image_size_M = 30.0 # estimated size of each image in MB
 
 def main() -> int:
     total_time_s = total_time_h * 60 * 60  # time of timelapse in secs
@@ -26,11 +38,11 @@ def main() -> int:
     print(f"Number of brackets after each interval: {brackets_count}")
     print(f"Estimated size of each image in MB: {estimated_image_size_M}")
     print("***********************************************")
-    print()
-    print("------------ DENUG ------------")
-    print(f"total_time_s: {total_time_s}")
-    print(f"total_number_of_shots: {total_number_of_shots}")
-    print("-------------------------------")
+    # print()
+    # print("------------ DENUG ------------")
+    # print(f"total_time_s: {total_time_s}")
+    # print(f"total_number_of_shots: {total_number_of_shots}")
+    # print("-------------------------------")
     print()
     print("◄►◄►◄►◄►◄►◄►◄►◄►◄►◄►◄► RESULTS ◄►◄►◄►◄►◄►◄►◄►◄►◄►◄►◄►")
     print(f"Calculated interval in seconds: {interval_s:.2f}[s]")
