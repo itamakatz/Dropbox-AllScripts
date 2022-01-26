@@ -17,10 +17,10 @@ CHANGE_PRINTING_SPEED = False;
 # =================================================================================== #
 
 # Enter path to the G-Code file and file name itself
-PATH = r"H:\Dropbox\Coding & Tools\3D Printer & Robotics\STL & G-Code Files\Current Prints\Owl_Pen_Holder\Owl_Pen_Holder___Tools_Holder";
+PATH = r"H:\Dropbox\Coding & Tools\3D Printer & Robotics\STL & G-Code Files\Current Prints\Cellular_Lamp\Cellular_Lamp\files";
 # PATH = r"J:\Dropbox\Coding & Tools\3D Printer & Robotics\STL & G-Code Files\Calibration Parts\Stringing Test\Ultrafast_and_economical_stringing_test\files";
 	
-FILE = "\\" + r"owl-Pen_Holder-support - v3";
+FILE = "\\" + r"bigmakerbottable4 - v1";
 
 # PATH = input("Please Enter File Path:\n");
 # print();
@@ -40,8 +40,8 @@ FAN_SPECIAL_CASE_PERCENTAGE = 0; # value of the desired speed
 LAYER_BEGING = 2; # 3; # 5; # 10; # 5; # 2; # First layer on which the fan will be turned on. Must be grater or equal to 1
 LEYER_STEP = 1; # 2; # 3; # 1; # Number of layers between a change in fan speed 
 FAN_STEP = 4; # 6; # 8; # Incremental value of the fan's speed after each change
-FAN_MIN_PERCENTAGE = 15; # 10; # 30; # Initial fan speed on layer numer LAYER_BEGING
-FAN_MAX_PERCENTAGE = 50; # 50; # 100; # 80; # The max speed at which the fan can run (Higher than 127PWM ~ 50% results in stringing)
+FAN_MIN_PERCENTAGE = 70; # (Old fan: 15; # 10; # 30); # Initial fan speed on layer number LAYER_BEGING
+FAN_MAX_PERCENTAGE = 100; # (Old fan: 50;) # The max speed at which the fan can run (Higher than 127PWM ~ 50% results in stringing)
 
 # Run fan in full power befor setting speed in case of a stalling fan. Set True one or none of the following
 BLIP_TIME = False; # Stall between the full fan speed to the target speed is only based on time
